@@ -1,0 +1,9 @@
+[build]
+  # 由 Netlify 执行构建，而不是直接发布仓库根目录
+  command = "npm run build"
+  # Next.js 静态导出（next.config.ts 中 output: "export"）产物目录
+  publish = "out"
+
+[build.environment]
+  # Next.js 16 要求 Node >= 20.9
+  NODE_VERSION = "22"
