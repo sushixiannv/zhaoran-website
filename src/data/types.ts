@@ -5,69 +5,77 @@ export interface NavItem {
 
 /** 数据驱动的图标键，与 components/icons.tsx 中的 iconMap 对应 */
 export type IconName =
-  | "brain"
-  | "briefcase"
-  | "file-text"
+  | "users"
   | "trending-up"
-  | "lightbulb"
-  | "message-circle";
+  | "chef-hat"
+  | "film"
+  | "pen-line"
+  | "layers"
+  | "rocket";
 
-export interface SkillGroup {
-  title: string;
-  highlight?: boolean;
+/** 真实结果卡片 */
+export interface Result {
+  id: string;
   icon: IconName;
   color: string;
-  items: string[];
-}
-
-export interface ProjectMetric {
+  /** 结果数字 */
   value: string;
+  /** 指标 */
   label: string;
-  /** 数据口径说明，例如「GMV，非个人收入」 */
-  note?: string;
+  /** 补充说明 */
+  note: string;
 }
 
+/** 服务卡片 */
+export interface Service {
+  id: string;
+  icon: IconName;
+  color: string;
+  title: string;
+  /** 核心说明 */
+  description: string;
+  /** 适用客户 */
+  clients: string[];
+  /** 适用场景 */
+  scenarios: string[];
+  /** 可提供内容 */
+  deliverables: string[];
+  /** 价值表达 */
+  value: string;
+  /** 行动文字 */
+  cta: string;
+}
+
+/** 代表项目卡片 */
 export interface Project {
   id: string;
   emoji: string;
   title: string;
-  category: string;
-  status?: string;
-  summary: string;
+  /** 项目结果 */
+  result: string;
   description: string;
-  /** 成果徽章颜色（十六进制） */
-  color: string;
-  metric?: ProjectMetric;
+  /** 能力标签 */
   tags: string[];
-  /** 成果要点（无 metric 的项目使用，如个人系统类项目） */
+  status: string;
+  /** 成果/状态徽章颜色（十六进制） */
+  color: string;
+  /** 数据口径说明小字，例如「GMV，非个人收入」 */
+  note?: string;
+  /** 可展示项目清单（无链接、仅名称） */
   highlights?: string[];
 }
 
-export interface Voyage {
-  id: string;
-  emoji: string;
-  title: string;
-  category: string;
-  /** 类型徽章颜色（十六进制） */
-  color: string;
-  description: string;
-  tags: string[];
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
-
+/** 联系方式条目（href 仅在有真实链接时提供） */
 export interface ContactItem {
   name: string;
   description: string;
   emoji: string;
+  href?: string;
 }
 
-export interface WhatIDoItem {
+/** 合作方向入口 */
+export interface ContactDirection {
   icon: IconName;
   color: string;
-  title: string;
-  description: string;
+  label: string;
 }

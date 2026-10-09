@@ -52,39 +52,13 @@ export function Sparkles(props: IconProps) {
   );
 }
 
-export function Brain(props: IconProps) {
+export function Users(props: IconProps) {
   return (
     <Svg {...props}>
-      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
-      <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
-      <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
-      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
-      <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
-      <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
-      <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
-      <path d="M6 18a4 4 0 0 1-1.967-.516" />
-      <path d="M19.967 17.484A4 4 0 0 1 18 18" />
-    </Svg>
-  );
-}
-
-export function Briefcase(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      <rect width="20" height="14" x="2" y="6" rx="2" />
-    </Svg>
-  );
-}
-
-export function FileText(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-      <path d="M10 9H8" />
-      <path d="M16 13H8" />
-      <path d="M16 17H8" />
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </Svg>
   );
 }
@@ -98,37 +72,75 @@ export function TrendingUp(props: IconProps) {
   );
 }
 
-export function Lightbulb(props: IconProps) {
+export function ChefHat(props: IconProps) {
   return (
     <Svg {...props}>
-      <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
-      <path d="M9 18h6" />
-      <path d="M10 22h4" />
+      <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+      <path d="M6 17h12" />
     </Svg>
   );
 }
 
-export function MessageCircle(props: IconProps) {
+export function Film(props: IconProps) {
   return (
     <Svg {...props}>
-      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+      <rect width="18" height="18" x="3" y="3" rx="2" />
+      <path d="M7 3v18" />
+      <path d="M3 7.5h4" />
+      <path d="M3 12h18" />
+      <path d="M3 16.5h4" />
+      <path d="M17 3v18" />
+      <path d="M21 7.5h-4" />
+      <path d="M21 16.5h-4" />
     </Svg>
   );
 }
 
-export function MapPin(props: IconProps) {
+export function PenLine(props: IconProps) {
   return (
     <Svg {...props}>
-      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-      <circle cx="12" cy="10" r="3" />
+      <path d="M12 20h9" />
+      <path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" />
     </Svg>
   );
 }
 
-export function ChevronDown(props: IconProps) {
+export function Layers(props: IconProps) {
   return (
     <Svg {...props}>
-      <path d="m6 9 6 6 6-6" />
+      <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+      <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+      <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+    </Svg>
+  );
+}
+
+export function Rocket(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    </Svg>
+  );
+}
+
+export function Menu(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </Svg>
+  );
+}
+
+export function X(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
     </Svg>
   );
 }
@@ -136,10 +148,11 @@ export function ChevronDown(props: IconProps) {
 /** 数据驱动图标映射：data 中的 icon 字段 -> 组件 */
 export const iconMap: Record<IconName, (props: IconProps) => React.JSX.Element> =
   {
-    brain: Brain,
-    briefcase: Briefcase,
-    "file-text": FileText,
+    users: Users,
     "trending-up": TrendingUp,
-    lightbulb: Lightbulb,
-    "message-circle": MessageCircle,
+    "chef-hat": ChefHat,
+    film: Film,
+    "pen-line": PenLine,
+    layers: Layers,
+    rocket: Rocket,
   };

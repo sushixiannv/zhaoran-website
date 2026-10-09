@@ -1,73 +1,85 @@
-import { contactItems, partnerTargets } from "@/data/contact";
-import { Heart, MapPin, Sparkles } from "./icons";
+import { contactDirections, contactIntro, contactItems } from "@/data/contact";
+import { iconMap, Heart } from "./icons";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-16 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-serif text-2xl font-semibold text-[#581C87] mb-8 flex items-center gap-3 justify-center">
+        <h2 className="font-serif text-2xl font-semibold text-[#581C87] mb-2 flex items-center gap-3 justify-center">
           <Heart className="w-5 h-5 text-[#EC4899]" />
-          联系我
+          {contactIntro.title}
           <Heart className="w-5 h-5 text-[#EC4899]" />
         </h2>
-        <div className="border-[#FBCFE8] card-soft bg-white rounded-2xl overflow-hidden">
-          <div className="p-6">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-[#581C87] mb-4 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-[#FBBF24]" />
-                  社交媒体
-                </h3>
-                <div className="space-y-4">
-                  {contactItems.map((item) => (
-                    <div
-                      key={item.name}
-                      className="flex items-center gap-3 group cursor-pointer"
-                    >
-                      <div className="w-10 h-10 rounded-full bg-[#FAE8FF] flex items-center justify-center group-hover:bg-[#EC4899] transition-colors text-lg">
-                        {item.emoji}
-                      </div>
-                      <div>
-                        <p className="text-[#581C87] text-sm font-medium group-hover:text-[#EC4899] transition-colors">
-                          {item.name}
-                        </p>
-                        <p className="text-[#7C3AED]/70 text-xs">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        <p className="text-[#7C3AED] mb-8 text-center max-w-2xl mx-auto">
+          {contactIntro.description}
+        </p>
 
-              <div>
-                <h3 className="font-semibold text-[#581C87] mb-4 flex items-center gap-2">
-                  <Heart className="w-5 h-5 text-[#EC4899]" />
-                  适合合作的伙伴
-                </h3>
-                <p className="text-[#581C87]/70 leading-relaxed mb-4 text-sm">
-                  {partnerTargets.map((target, i) => (
-                    <span key={target}>
-                      {i > 0 && <br />}• {target}
-                    </span>
-                  ))}
-                </p>
-                <div className="flex items-center gap-2 text-[#7C3AED] mb-4">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">中国</span>
+        {/* 合作方向入口 */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {contactDirections.map((direction) => {
+            const Icon = iconMap[direction.icon];
+            return (
+              <a
+                key={direction.label}
+                href="#contact-methods"
+                className="border-[#FBCFE8] card-soft bg-white rounded-2xl p-4 text-center hover:bg-[#FAE8FF] transition-colors"
+              >
+                <div
+                  className="w-11 h-11 mx-auto rounded-full mb-2 flex items-center justify-center"
+                  style={{ backgroundColor: `${direction.color}20` }}
+                >
+                  <Icon className="w-5 h-5" style={{ color: direction.color }} />
                 </div>
-                <div className="flex gap-3 mt-6">
-                  <div className="sticker bg-[#F9A8D4] px-3 py-1 rounded-full text-white text-xs">
-                    💖 期待合作
+                <span className="text-sm font-medium text-[#581C87]">
+                  {direction.label}
+                </span>
+              </a>
+            );
+          })}
+        </div>
+
+        {/* 联系方式区域 */}
+        <div
+          id="contact-methods"
+          className="border-[#FBCFE8] card-soft bg-white rounded-2xl overflow-hidden scroll-mt-24"
+        >
+          <div className="p-6">
+            <h3 className="font-semibold text-[#581C87] mb-4 flex items-center gap-2">
+              <Heart className="w-5 h-5 text-[#EC4899]" />
+              联系方式
+            </h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {contactItems.map((item) => {
+                const inner = (
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[#FAE8FF] flex items-center justify-center text-lg shrink-0">
+                      {item.emoji}
+                    </div>
+                    <div>
+                      <p className="text-[#581C87] text-sm font-medium">
+                        {item.name}
+                      </p>
+                      <p className="text-[#7C3AED]/70 text-xs">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    className="sticker bg-[#A8D5BA] px-3 py-1 rounded-full text-[#581C87] text-xs"
-                    style={{ transform: "rotate(2deg)" }}
+                );
+
+                return item.href ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group"
                   >
-                    ✨ 共同成长
-                  </div>
-                </div>
-              </div>
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={item.name}>{inner}</div>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -9,9 +9,11 @@ export default function SiteFooter() {
           {site.name}
           <Heart className="w-4 h-4 text-[#EC4899] heart-beat" />
         </p>
-        <p className="text-[#7C3AED] text-sm mb-2">{site.hero.slogan}</p>
+        <p className="text-[#7C3AED] text-sm mb-2">
+          AI应用、内容资产与商业方案实践者
+        </p>
         <p className="text-[#7C3AED]/60 text-xs">
-          © {new Date().getFullYear()} {site.brand} · 内容增长 · 商业拆解 · AI第二大脑
+          © {new Date().getFullYear()} {site.name} · AI品牌内容 · 知识资产化 · AI产品原型
         </p>
         <div className="flex justify-center gap-2 mt-4">
           <Star className="w-4 h-4 text-[#FBBF24] twinkle" />

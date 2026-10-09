@@ -1,4 +1,4 @@
-# 昭然的个人网站
+# 熙然的个人网站
 
 基于 Next.js（App Router）+ TypeScript + Tailwind CSS 的个人网站，采用静态导出（`output: "export"`），可直接部署到 Netlify 等纯静态托管平台。
 

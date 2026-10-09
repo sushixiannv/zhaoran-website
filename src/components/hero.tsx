@@ -46,7 +46,7 @@ export default function Hero() {
             <Star className="absolute -bottom-2 -left-6 w-6 h-6 text-[#FBBF24] twinkle" />
           </div>
 
-          {/* 姓名与简介 */}
+          {/* 姓名、身份与介绍 */}
           <div className="text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#581C87] mb-3">
               {site.name}
@@ -55,7 +55,10 @@ export default function Hero() {
               {site.brand}
               <Heart className="w-4 h-4 heart-beat" />
             </p>
-            <p className="text-[#7C3AED] text-lg mb-4">{hero.subtitle}</p>
+            <p className="text-[#7C3AED] text-lg font-medium mb-4">{hero.role}</p>
+            <p className="text-[#581C87] font-medium leading-relaxed max-w-xl mx-auto mb-3">
+              {hero.value}
+            </p>
             <p className="text-[#581C87]/70 leading-relaxed max-w-xl mx-auto">
               {hero.description}
             </p>
@@ -66,6 +69,23 @@ export default function Hero() {
             <Star className="w-4 h-4 text-[#FBBF24]" />
             {hero.slogan}
             <Star className="w-4 h-4 text-[#FBBF24]" />
+          </div>
+
+          {/* 行动入口 */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {hero.actions.map((action, i) => (
+              <a
+                key={action.href}
+                href={action.href}
+                className={
+                  i === 0
+                    ? "inline-flex items-center gap-2 rounded-full bg-[#EC4899] text-white px-6 py-2.5 text-sm font-medium hover:bg-[#DB2777] transition-colors"
+                    : "inline-flex items-center gap-2 rounded-full border border-[#EC4899] text-[#EC4899] px-6 py-2.5 text-sm font-medium hover:bg-[#FAE8FF] transition-colors"
+                }
+              >
+                {action.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

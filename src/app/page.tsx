@@ -1,11 +1,9 @@
 import SiteHeader from "@/components/site-header";
 import Hero from "@/components/hero";
-import About from "@/components/about";
-import WhatIDo from "@/components/what-i-do";
-import Skills from "@/components/skills";
+import Results from "@/components/results";
+import Services from "@/components/services";
 import Projects from "@/components/projects";
-import Voyages from "@/components/voyages";
-import Faq from "@/components/faq";
+import About from "@/components/about";
 import Contact from "@/components/contact";
 import SiteFooter from "@/components/site-footer";
 
@@ -15,12 +13,10 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
-        <About />
-        <WhatIDo />
-        <Skills />
+        <Results />
+        <Services />
         <Projects />
-        <Voyages />
-        <Faq />
+        <About />
         <Contact />
       </main>
       <SiteFooter />

@@ -1,8 +1,8 @@
 {
-  "name": "zhaoran-website",
+  "name": "xiran-website",
   "version": "1.0.0",
   "private": true,
-  "description": "昭然的个人网站（Next.js App Router + TypeScript + Tailwind CSS，静态导出）",
+  "description": "熙然的个人网站（Next.js App Router + TypeScript + Tailwind CSS，静态导出）",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

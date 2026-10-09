@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   keywords: site.keywords,
-  authors: [{ name: site.author, url: site.authorUrl }],
+  authors: [{ name: site.author }],
   robots: { index: true, follow: true },
   openGraph: {
     title: site.title,
