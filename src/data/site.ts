@@ -2,9 +2,9 @@ export const site = {
   /** 姓名 / 品牌名 */
   name: "熙然",
   /** 个人 IP 标签 */
-  brand: "AI仙女",
+  brand: "CC依然是仙女",
   /** 页面标题（SEO） */
-  title: "熙然｜AI仙女",
+  title: "熙然｜CC依然是仙女",
   /** 页面描述（SEO） */
   description:
     "熙然专注于AI品牌内容、B端AI漫剧、知识与项目资产化，以及AI产品原型验证，帮助品牌、创业者和小团队把业务需求转化为内容、资产和可验证方案。",
@@ -15,6 +15,7 @@ export const site = {
   /** 关键词（中性，不堆砌） */
   keywords: [
     "熙然",
+    "CC依然是仙女",
     "AI品牌内容",
     "AI漫剧",
     "B端AI内容",
